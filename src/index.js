@@ -1,1 +1,10 @@
-console.log("Hello World!");
+// Functions as first class citizens
+
+function sayHello() {
+    return function () {
+        return "Hello World!"
+    }
+}
+
+let fn = sayHello();
+let message = fn();
