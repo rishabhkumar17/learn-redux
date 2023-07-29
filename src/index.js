@@ -28,4 +28,12 @@ const toLowerCase = str => str.toLowerCase();
 // const transformUsingPipe = pipe(trim, toLowerCase, wrapInDiv);
 const transformUsingPipe = pipe(trim, toLowerCase, wrap("div"));
 const res = transformUsingPipe(input);
-console.log(res);
+
+// updating objects
+
+const person = { name: "sage" };
+// const updated = { ...person, name: "sage" }; // shallow copy
+const updated = Object.assign({}, person, { age: 700 }); // shallow copy
+
+console.log(person);
+console.log(updated);
